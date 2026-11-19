@@ -1,0 +1,551 @@
+
+/* =================================
+   SARRAVELLE - LOMBOK TRAVEL WEBSITE
+================================= */
+
+/* COLOR PALETTE */
+:root {
+    --teal: #36A6A0;
+    --coral: #E77C5B;
+    --green: #62865A;
+    --yellow: #F2C75C;
+    --cream: #FFF5E6;
+    --dark: #29483C;
+    --brown: #49372D;
+    --white: #FFFFFF;
+}
+
+/* GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--cream);
+    color: var(--brown);
+    line-height: 1.7;
+}
+
+img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+select {
+    font: inherit;
+}
+
+.section-padding {
+    padding: 85px 8%;
+}
+
+/* NAVIGATION */
+.navbar {
+    width: 100%;
+    min-height: 75px;
+    padding: 15px 7%;
+    background: #F6C7C5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-family: Georgia, serif;
+    font-size: 27px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: var(--dark);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--coral);
+}
+
+.menu-toggle {
+    display: none;
+    border: none;
+    background: transparent;
+    font-size: 27px;
+    cursor: pointer;
+}
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+    background: var(--coral);
+    color: white;
+    padding: 13px 28px;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: var(--dark);
+    transform: translateY(-3px);
+}
+
+/* HERO */
+.hero {
+    min-height: 620px;
+    display: flex;
+    align-items: center;
+    padding: 80px 10%;
+    background:
+        linear-gradient(rgba(20, 45, 42, 0.38), rgba(20, 45, 42, 0.48)),
+        url("/static/images/01-hero-lombok.jpeg");
+    background-position: center;
+    background-size: cover;
+    color: white;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.hero-subtitle {
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+    color: var(--yellow);
+}
+
+.hero h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(42px, 6vw, 72px);
+    line-height: 1.15;
+    margin-bottom: 22px;
+}
+
+.hero-content > p:not(.hero-subtitle) {
+    max-width: 550px;
+    margin-bottom: 30px;
+    font-size: 17px;
+}
+
+/* INTRODUCTION */
+.intro {
+    background: var(--cream);
+}
+
+.intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 55px;
+}
+
+.section-label {
+    color: var(--coral);
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+.intro h2,
+.section-heading h2,
+.culture h2 {
+    font-family: Georgia, serif;
+    font-size: clamp(30px, 4vw, 44px);
+    line-height: 1.2;
+    color: var(--dark);
+    margin-bottom: 20px;
+}
+
+.intro-text p {
+    margin-bottom: 17px;
+}
+
+.intro-image img {
+    height: 390px;
+    border-radius: 25px;
+}
+
+.text-link {
+    display: inline-block;
+    color: var(--coral);
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* SECTION HEADING */
+.section-heading {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 50px;
+}
+
+.section-heading > p:last-child {
+    color: #746A60;
+}
+
+/* EXPERIENCES */
+.experiences {
+    background: #DDF1ED;
+}
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.experience-card {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+    transition: 0.3s;
+}
+
+.experience-card:hover,
+.destination-card:hover,
+.food-card:hover {
+    transform: translateY(-8px);
+}
+
+.experience-card img {
+    height: 250px;
+}
+
+.card-content {
+    padding: 22px;
+}
+
+.card-content h3 {
+    font-family: Georgia, serif;
+    font-size: 22px;
+    color: var(--dark);
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    color: #746A60;
+    font-size: 14px;
+}
+
+/* DESTINATIONS */
+.destinations {
+    background: #FFF0D9;
+}
+
+.destination-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.destination-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+    transition: 0.3s;
+}
+
+.destination-card img {
+    height: 280px;
+}
+
+/* CULTURE */
+.culture {
+    background: #F6D7CF;
+}
+
+.culture-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 55px;
+}
+
+.culture-content img {
+    height: 400px;
+    border-radius: 25px;
+}
+
+.culture-content p {
+    margin-bottom: 18px;
+}
+
+/* LOCAL FOOD */
+.food {
+    background: #E5F0D9;
+}
+
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.food-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+    transition: 0.3s;
+}
+
+.food-card img {
+    height: 270px;
+}
+
+/* TRAVEL PLANNER */
+.planner {
+    background:
+        linear-gradient(rgba(41, 72, 60, 0.86), rgba(41, 72, 60, 0.90)),
+        url("/static/images/01-hero-lombok.jpeg");
+    background-position: center;
+    background-size: cover;
+}
+
+.planner .section-heading h2,
+.planner .section-heading > p:last-child {
+    color: white;
+}
+
+.planner .section-label {
+    color: var(--yellow);
+}
+
+.planner-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 35px;
+    background: white;
+    border-radius: 20px;
+}
+
+.planner-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.planner-container label {
+    font-weight: bold;
+    color: var(--dark);
+    margin-top: 8px;
+}
+
+.planner-container input,
+.planner-container select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #DDD;
+    border-radius: 9px;
+    background: white;
+    color: var(--brown);
+}
+
+.planner-container input:focus,
+.planner-container select:focus {
+    outline: 2px solid var(--teal);
+}
+
+.planner-container button {
+    margin-top: 18px;
+}
+
+.result-box {
+    margin-top: 25px;
+    padding: 22px;
+    background: #DDF1ED;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.result-box h3 {
+    color: var(--dark);
+}
+
+.result-box p {
+    color: var(--coral);
+    font-size: 30px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.result-box small {
+    color: #746A60;
+}
+
+.error-message {
+    margin-top: 20px;
+    padding: 15px;
+    background: #FFE1DF;
+    color: #A83232;
+    border-radius: 10px;
+}
+
+/* FOOTER */
+.footer {
+    background: var(--dark);
+    color: white;
+    text-align: center;
+    padding: 50px 8% 20px;
+}
+
+.footer-content h2 {
+    font-family: Georgia, serif;
+    font-size: 30px;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+.footer-content p {
+    margin-bottom: 8px;
+    color: #E8E8E8;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 30px;
+    padding-top: 20px;
+    font-size: 13px;
+}
+
+.creator {
+    color: var(--yellow);
+    margin-top: 8px;
+    letter-spacing: 1px;
+}
+
+/* SCROLL REVEAL */
+.reveal {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+
+/* TABLET */
+@media (max-width: 1000px) {
+    .experience-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 700px) {
+    .navbar {
+        padding: 15px 6%;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        background: #F6C7C5;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .section-padding {
+        padding: 60px 6%;
+    }
+
+    .hero {
+        min-height: 540px;
+        padding: 65px 7%;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .intro-grid,
+    .culture-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .intro-image img,
+    .culture-content img {
+        height: 280px;
+    }
+
+    .experience-grid,
+    .destination-grid,
+    .food-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-card img,
+    .destination-card img,
+    .food-card img {
+        height: 250px;
+    }
+
+    .planner-container {
+        padding: 22px;
+    }
+}

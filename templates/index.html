@@ -1,0 +1,417 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sarravelle | Discover Lombok</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <header class="navbar">
+        <div class="logo">SARRAVELLE</div>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+            ☰
+        </button>
+
+        <nav class="nav-links" id="navLinks">
+            <a href="#home">Home</a>
+            <a href="#experiences">Experiences</a>
+            <a href="#destinations">Destinations</a>
+            <a href="#culture">Culture</a>
+            <a href="#food">Local Food</a>
+            <a href="#planner">Plan Your Trip</a>
+        </nav>
+    </header>
+
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <p class="hero-subtitle">WELCOME TO THE ISLAND OF BEAUTY</p>
+
+            <h1>Discover Lombok,<br>Beyond the Ordinary.</h1>
+
+            <p>
+                Explore breathtaking landscapes, discover local traditions,
+                and experience unforgettable adventures in Lombok, Indonesia.
+            </p>
+
+            <a href="#destinations" class="btn">Explore Lombok</a>
+        </div>
+    </section>
+
+
+    <!-- INTRODUCTION -->
+    <section class="intro section-padding">
+        <div class="intro-grid">
+            <div class="intro-text">
+                <p class="section-label">A LITTLE PARADISE</p>
+
+                <h2>More Than Just a Destination</h2>
+
+                <p>
+                    Lombok is a beautiful island in Indonesia filled with
+                    stunning beaches, majestic mountains, rich traditions,
+                    and delicious local cuisine.
+                </p>
+
+                <p>
+                    Whether you are looking for relaxation, adventure,
+                    or cultural experiences, Lombok has something special
+                    waiting for you.
+                </p>
+
+                <a href="#experiences" class="text-link">
+                    Discover Our Experiences →
+                </a>
+            </div>
+
+            <div class="intro-image">
+                <img
+                    src="{{ url_for('static', filename='images/01-hero-lombok.jpeg') }}"
+                    alt="Beautiful scenery of Lombok">
+            </div>
+        </div>
+    </section>
+
+
+    <!-- EXPERIENCES -->
+    <section class="experiences section-padding" id="experiences">
+        <div class="section-heading">
+            <p class="section-label">MAKE EVERY MOMENT COUNT</p>
+            <h2>Experiences to Remember</h2>
+            <p>Find your own way to experience the beauty of Lombok.</p>
+        </div>
+
+        <div class="experience-grid">
+
+            <div class="experience-card">
+                <img
+                    src="{{ url_for('static', filename='images/02-kuta-beach.jpeg') }}"
+                    alt="Beach experience">
+
+                <div class="card-content">
+                    <h3>Beach Escapes</h3>
+                    <p>Relax on beautiful beaches and enjoy crystal-clear waters.</p>
+                </div>
+            </div>
+
+            <div class="experience-card">
+                <img
+                    src="{{ url_for('static', filename='images/04-rinjani.jpeg') }}"
+                    alt="Mount Rinjani adventure">
+
+                <div class="card-content">
+                    <h3>Nature & Adventure</h3>
+                    <p>Explore mountains, waterfalls, and breathtaking landscapes.</p>
+                </div>
+            </div>
+
+            <div class="experience-card">
+                <img
+                    src="{{ url_for('static', filename='images/05-sasak-village.jpeg') }}"
+                    alt="Sasak traditional village">
+
+                <div class="card-content">
+                    <h3>Cultural Discovery</h3>
+                    <p>Discover the traditions and everyday life of the Sasak people.</p>
+                </div>
+            </div>
+
+            <div class="experience-card">
+                <img
+                    src="{{ url_for('static', filename='images/06-lombok-food.jpeg') }}"
+                    alt="Traditional Lombok food">
+
+                <div class="card-content">
+                    <h3>Local Flavours</h3>
+                    <p>Taste authentic dishes and discover Lombok's culinary heritage.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- DESTINATIONS -->
+    <section class="destinations section-padding" id="destinations">
+        <div class="section-heading">
+            <p class="section-label">EXPLORE THE ISLAND</p>
+            <h2>Places You Shouldn't Miss</h2>
+            <p>Discover some of the most beautiful destinations in Lombok.</p>
+        </div>
+
+        <div class="destination-grid">
+
+            <div class="destination-card">
+                <img
+                    src="{{ url_for('static', filename='images/03-tanjung-aan.jpeg') }}"
+                    alt="Tanjung Aan Beach">
+
+                <div class="card-content">
+                    <h3>Tanjung Aan Beach</h3>
+                    <p>Famous for its turquoise water and unique white sand.</p>
+                </div>
+            </div>
+
+            <div class="destination-card">
+                <img
+                    src="{{ url_for('static', filename='images/02-kuta-beach.jpeg') }}"
+                    alt="Kuta Mandalika">
+
+                <div class="card-content">
+                    <h3>Kuta Mandalika</h3>
+                    <p>A coastal destination with beautiful views and a lively atmosphere.</p>
+                </div>
+            </div>
+
+            <div class="destination-card">
+                <img
+                    src="{{ url_for('static', filename='images/04-rinjani.jpeg') }}"
+                    alt="Mount Rinjani">
+
+                <div class="card-content">
+                    <h3>Mount Rinjani</h3>
+                    <p>A magnificent mountain for nature lovers and adventure seekers.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- CULTURE -->
+    <section class="culture section-padding" id="culture">
+        <div class="culture-content">
+
+            <div>
+                <p class="section-label">ROOTED IN TRADITION</p>
+
+                <h2>Meet the Culture of Lombok</h2>
+
+                <p>
+                    Lombok is home to the Sasak people, whose traditions,
+                    architecture, crafts, and cultural celebrations make
+                    the island truly special.
+                </p>
+
+                <p>
+                    Visit traditional villages such as Sade and learn more
+                    about the island's cultural heritage.
+                </p>
+            </div>
+
+            <img
+                src="{{ url_for('static', filename='images/05-sasak-village.jpeg') }}"
+                alt="Traditional Sasak village">
+
+        </div>
+    </section>
+
+
+    <!-- LOCAL FOOD -->
+    <section class="food section-padding" id="food">
+        <div class="section-heading">
+            <p class="section-label">A TASTE OF LOMBOK</p>
+            <h2>Flavours You Must Try</h2>
+            <p>Make your journey even more memorable with local cuisine.</p>
+        </div>
+
+        <div class="food-grid">
+
+            <div class="food-card">
+                <img
+                    src="{{ url_for('static', filename='images/06-lombok-food.jpeg') }}"
+                    alt="Ayam Taliwang">
+
+                <div class="card-content">
+                    <h3>Ayam Taliwang</h3>
+                    <p>Grilled chicken served with a delicious spicy sauce.</p>
+                </div>
+            </div>
+
+            <div class="food-card">
+                <img
+                    src="{{ url_for('static', filename='images/07-plecing-kangkung.jpeg') }}"
+                    alt="Plecing Kangkung">
+
+                <div class="card-content">
+                    <h3>Plecing Kangkung</h3>
+                    <p>Fresh water spinach served with spicy sambal.</p>
+                </div>
+            </div>
+
+            <div class="food-card">
+                <img
+                    src="{{ url_for('static', filename='images/08-sate-rembiga.jpeg') }}"
+                    alt="Sate Rembiga">
+
+                <div class="card-content">
+                    <h3>Sate Rembiga</h3>
+                    <p>Traditional beef satay with a rich and spicy flavour.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- TRAVEL PLANNER -->
+    <section class="planner section-padding" id="planner">
+        <div class="section-heading">
+            <p class="section-label">YOUR JOURNEY STARTS HERE</p>
+            <h2>Plan Your Lombok Adventure</h2>
+            <p>Choose your experience and get an estimated tour price.</p>
+        </div>
+
+        <div class="planner-container">
+
+            <form method="POST" action="{{ url_for('home') }}">
+
+                <label for="tour">Choose Your Experience</label>
+
+                <select name="tour" id="tour" required>
+                    <option value="">Select an experience</option>
+
+                    <option value="Beach Tour"
+                        {% if form_data.tour == "Beach Tour" %}selected{% endif %}>
+                        Beach Tour
+                    </option>
+
+                    <option value="Nature Adventure"
+                        {% if form_data.tour == "Nature Adventure" %}selected{% endif %}>
+                        Nature Adventure
+                    </option>
+
+                    <option value="Cultural Tour"
+                        {% if form_data.tour == "Cultural Tour" %}selected{% endif %}>
+                        Cultural Tour
+                    </option>
+
+                    <option value="Food Tour"
+                        {% if form_data.tour == "Food Tour" %}selected{% endif %}>
+                        Food Tour
+                    </option>
+                </select>
+
+
+                <label for="hours">Tour Duration</label>
+
+                <select name="hours" id="hours" required>
+                    <option value="2"
+                        {% if form_data.hours == "2" %}selected{% endif %}>
+                        2 Hours
+                    </option>
+
+                    <option value="3"
+                        {% if form_data.hours == "3" %}selected{% endif %}>
+                        3 Hours
+                    </option>
+
+                    <option value="4"
+                        {% if form_data.hours == "4" %}selected{% endif %}>
+                        4 Hours
+                    </option>
+                </select>
+
+
+                <label for="guests">Number of Guests</label>
+
+                <select name="guests" id="guests" required>
+                    <option value="1"
+                        {% if form_data.guests == "1" %}selected{% endif %}>
+                        1 Guest
+                    </option>
+
+                    <option value="2"
+                        {% if form_data.guests == "2" %}selected{% endif %}>
+                        2 Guests
+                    </option>
+
+                    <option value="3"
+                        {% if form_data.guests == "3" %}selected{% endif %}>
+                        3 Guests
+                    </option>
+
+                    <option value="4"
+                        {% if form_data.guests == "4" %}selected{% endif %}>
+                        4 Guests
+                    </option>
+                </select>
+
+
+                <label for="date">Preferred Date</label>
+
+                <input
+                    type="date"
+                    name="date"
+                    id="date"
+                    value="{{ form_data.date }}"
+                    required>
+
+
+                <button type="submit" class="btn">
+                    Calculate Estimated Price
+                </button>
+
+            </form>
+
+
+            {% if error %}
+                <div class="error-message">
+                    {{ error }}
+                </div>
+            {% endif %}
+
+
+            {% if result is not none %}
+                <div class="result-box">
+                    <h3>Your Estimated Tour Price</h3>
+
+                    <p>
+                        IDR {{ "{:,.0f}".format(result) }}
+                    </p>
+
+                    <small>
+                        This is an estimated price for your selected tour.
+                    </small>
+                </div>
+            {% endif %}
+
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="footer-content">
+            <h2>SARRAVELLE</h2>
+
+            <p>Discover Lombok, Beyond the Ordinary.</p>
+
+            <p>
+                Explore the beauty, culture, and flavours of Lombok, Indonesia.
+            </p>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Sarravelle. All Rights Reserved.</p>
+
+            <p class="creator">
+                Created by Syahrani Fathiansyah Hsb
+            </p>
+        </div>
+
+    </footer>
+
+</body>
+</html>
